@@ -151,9 +151,10 @@ from (select 0 as id, '0' as unique_key) as tmp
 where not exists(select * from batch_job_seq);
 
 # --------------example table---------------
-CREATE TABLE people
+create table xxl_job.people
 (
-    person_id  BIGINT NOT NULL PRIMARY KEY,
-    first_name VARCHAR(20),
-    last_name  VARCHAR(20)
+    person_id  bigint auto_increment
+        primary key,
+    first_name varchar(20) null,
+    last_name  varchar(20) null
 );

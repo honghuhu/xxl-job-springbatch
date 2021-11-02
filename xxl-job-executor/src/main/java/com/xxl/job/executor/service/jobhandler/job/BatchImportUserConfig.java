@@ -2,10 +2,7 @@ package com.xxl.job.executor.service.jobhandler.job;
 
 import com.xxl.job.core.context.XxlJobHelper;
 import groovy.util.logging.Slf4j;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import org.springframework.batch.core.BatchStatus;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.JobExecution;
@@ -45,7 +42,7 @@ public class BatchImportUserConfig {
                 .name("personItemReader")
                 .resource(new ClassPathResource("sample-data.csv"))
                 .delimited()
-                .names("firstName", "lastName")
+                .names(new String[]{"firstName", "lastName"})
                 .fieldSetMapper(new BeanWrapperFieldSetMapper<Person>() {{
                     setTargetType(Person.class);
                 }})
@@ -111,6 +108,7 @@ public class BatchImportUserConfig {
 
     @Getter
     @Setter
+    @ToString
     @NoArgsConstructor
     @AllArgsConstructor
     public static class Person {
