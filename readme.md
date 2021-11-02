@@ -15,13 +15,6 @@
 #### 3. [访问控制台](http://127.0.0.1:8080/xxl-job-admin/jobinfo)
 - 默认登录账号 admin/123456
 
-#### 4. 新增任务
-- 任务描述：importUserJob
-- Cron：0 0 0 * * ?
-- JobHandler：enableSpringBatchJobHandler
-- 任务参数：importUserJob
-- ...其余参数默认
-
-#### 5. 触发任务与查看任务执行日志
+#### 4. 触发任务与查看任务执行日志
 任务管理：操作 --> 执行任务一次
 任务管理：操作 --> 查询日志
