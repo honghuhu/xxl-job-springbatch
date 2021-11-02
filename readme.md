@@ -5,7 +5,7 @@
 #### 1. 初始化sql脚本
 
 - [tables_xxl_job.sql](doc/db/tables_xxl_job.sql)
-- [tables_spring_batch.sql](doc/db/tables_spring_batch.sql.sql)
+- [tables_spring_batch.sql](doc/db/tables_spring_batch.sql)
 
 #### 2. 启动项目
 
